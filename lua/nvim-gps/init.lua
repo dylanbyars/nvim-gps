@@ -45,8 +45,10 @@ local function setup_language_configs()
 	configs = {
 		["javascript"] = with_default_config({
 			icons = {
-				["array-name"] = ' ',
-				["object-name"] = ' ',
+        ["tag-name"] = " ",
+        ["hook-name"] = "ﯠ ",
+        ["array-name"] = ' ',
+        ["object-name"] = ' ',
 			}
 		}),
 		["json"] = with_default_config({

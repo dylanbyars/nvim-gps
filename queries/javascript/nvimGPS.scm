@@ -1,3 +1,18 @@
+; Hooks
+;
+; calling a hook -> useFoo()
+((call_expression
+	function: (identifier) @hook-name (#match? @hook-name "^use")
+	) @scope-root)
+
+; JSX
+;
+; tags -> `<Kachow></Kachow>`
+((jsx_element open_tag: (jsx_opening_element name: (_) @tag-name)) @scope-root)
+
+; self-closing tag -> `<Foo />`
+((jsx_self_closing_element name: (_) @tag-name) @scope-root)
+
 
 ; Class
 ((class_declaration
